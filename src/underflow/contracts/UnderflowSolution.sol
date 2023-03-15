@@ -12,7 +12,7 @@ import "./Underflow.sol";
  */
 contract UnderflowSolution is Underflow {
     
-    function withdraw(uint _amount) public payable virtual override {
+    function withdraw(uint _amount) public virtual override {
         require(balances[msg.sender] >= _amount,"insufficient fund");
         payable(msg.sender).transfer(_amount);
         balances[msg.sender] -= _amount;

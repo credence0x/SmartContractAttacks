@@ -22,7 +22,7 @@ contract Underflow {
         balances[msg.sender] += msg.value;
     }
 
-    function withdraw(uint _amount) public payable virtual {
+    function withdraw(uint _amount) public virtual {
 
         if ((balances[msg.sender] - _amount) > 0){
             balances[msg.sender] -= _amount;
