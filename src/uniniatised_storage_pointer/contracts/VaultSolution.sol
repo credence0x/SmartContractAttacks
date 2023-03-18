@@ -9,7 +9,7 @@ import "./Vault.sol";
         
  */
 contract VaultSolution is Vault{
-    function deposit(bytes32 _name) public payable virtual override {
+    function deposit(bytes32 _name) public payable {
         // solution: set location function to memory
         UserDetails memory userDetails;
         userDetails.name = _name;
